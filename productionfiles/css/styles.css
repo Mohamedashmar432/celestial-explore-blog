@@ -1,0 +1,286 @@
+body {
+  background-color: black !important;
+  background-image: url(./assets/outer\ sky.png);
+}
+
+.home {
+  position: relative;
+  z-index: 1;
+  /* Rotate animation */
+}
+.home .moon-bg {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  z-index: -1; /* Place behind content */
+  animation: rotateMoon 60s linear infinite; /* Infinite rotation */
+}
+@keyframes rotateMoon {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.home .head-title {
+  font-size: 6rem;
+  font-family: "Orbitron", sans-serif;
+}
+@media (max-width: 576px) {
+  .home .head-title {
+    font-size: 2.5rem;
+  }
+}
+.home .highlight {
+  color: rgba(0, 255, 255, 0.6);
+  font-family: sans-serif;
+  font-family: "Orbitron", sans-serif;
+}
+.home .title-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+@media (min-width: 768px) {
+  .home .scrolled {
+    transform: scale(1.1);
+  }
+}
+.home .post-card {
+  width: 18rem;
+  background-color: black;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+.home .post-card:hover {
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  transition: 3ms ease-out;
+}
+.home .post-card .post-img {
+  height: 200px;
+  width: auto;
+}
+.home .post-card .card-title {
+  color: white;
+}
+.home .post-card .card-text {
+  color: white;
+}
+.home .post-card .read-me {
+  background-color: rgba(0, 255, 255, 0.6);
+  color: black;
+  padding: 3px 10px;
+}
+.home .trending-topic {
+  width: 18rem;
+  background-color: black;
+  border-radius: 15px;
+  border-color: rgba(0, 255, 255, 0.6);
+}
+.home .trending-topic .card-title {
+  color: white;
+}
+.home .trending-topic .card-text {
+  color: white;
+}
+@media (max-width: 576px) {
+  .home .post-card {
+    padding: 1rem 0;
+    width: auto;
+  }
+  .home .trending-topic {
+    padding: 1rem 0;
+    width: auto;
+  }
+}
+
+.main-blog {
+  position: relative;
+  z-index: 1;
+  /* Rotate animation */
+}
+.main-blog .earth-bg {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  z-index: -1; /* Place behind content */
+  animation: rotateearth 60s linear infinite; /* Infinite rotation */
+}
+@keyframes rotateearth {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.main-blog .form-control {
+  background-color: transparent;
+  border-color: rgba(0, 255, 255, 0.6);
+  width: 500px;
+}
+.main-blog .post-card {
+  width: 18rem;
+  background-color: black;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+.main-blog .post-card:hover {
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  transition: 3ms ease-out;
+}
+.main-blog .post-card .post-img {
+  height: 200px;
+  width: auto;
+}
+.main-blog .post-card .card-title {
+  color: white;
+}
+.main-blog .post-card .card-text {
+  color: white;
+}
+.main-blog .post-card .read-me {
+  background-color: rgba(0, 255, 255, 0.6);
+  color: black;
+  padding: 3px 10px;
+}
+.main-blog .trending-topic {
+  width: 18rem;
+  background-color: black;
+  border-radius: 15px;
+  border-color: rgba(0, 255, 255, 0.6);
+}
+.main-blog .trending-topic .card-title {
+  color: white;
+}
+.main-blog .trending-topic .card-text {
+  color: white;
+}
+@media (max-width: 576px) {
+  .main-blog .form-control {
+    width: 250px;
+  }
+  .main-blog .post-card {
+    width: auto;
+  }
+  .main-blog .trending-topic {
+    width: auto;
+  }
+}
+
+.blog-content .title {
+  color: white;
+}
+.blog-content .content {
+  color: white;
+}
+
+.about-us .highlight {
+  color: rgba(0, 255, 255, 0.6);
+  font-family: sans-serif;
+  font-family: "Orbitron", sans-serif;
+}
+.about-us .contact-card {
+  width: 30rem;
+  background-color: black;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  color: white;
+}
+.about-us .contact-card .card-bod {
+  padding: 1.5rem;
+}
+.about-us .contact-card .card-bod .form-label {
+  color: #f1f1f1;
+}
+.about-us .contact-card .card-bod .form-control {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(0, 255, 255, 0.6);
+  color: white;
+}
+.about-us .contact-card .card-bod .form-control:focus {
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.6);
+  border-color: rgba(0, 255, 255, 0.6);
+}
+.about-us .contact-card .card-bod .btn-primary {
+  background-color: rgba(0, 255, 255, 0.6);
+  border-color: rgba(0, 255, 255, 0.6);
+}
+.about-us .contact-card .card-bod .btn-primary:hover {
+  background-color: rgba(0, 204, 204, 0.6);
+}
+.about-us .contact-card .card-bod .invalid-feedback {
+  color: #ff6b6b;
+}
+
+footer {
+  background-color: black;
+  height: 200px;
+}
+footer p {
+  color: white;
+}
+footer p .highlight {
+  color: rgba(0, 255, 255, 0.6);
+  font-family: sans-serif;
+  font-family: "Orbitron", sans-serif;
+}
+footer .categories .highlight {
+  color: rgba(0, 255, 255, 0.6);
+  font-family: sans-serif;
+  font-family: "Orbitron", sans-serif;
+}
+footer .categories a {
+  text-decoration: none;
+  display: grid;
+}
+footer .socials .highlight {
+  color: rgba(0, 255, 255, 0.6);
+  font-family: sans-serif;
+  font-family: "Orbitron", sans-serif;
+}
+@media (max-width: 576px) {
+  footer {
+    height: auto;
+  }
+  footer .socials .highlight {
+    margin-top: 5px;
+  }
+}
+
+.custom-navbar {
+  background-color: transparent;
+  padding: 15px 0;
+}
+.custom-navbar .navbar-nav {
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.836);
+}
+.custom-navbar .nav-link {
+  color: #e5e6ea;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  position: relative;
+}
+.custom-navbar .nav-link:hover {
+  color: rgba(0, 255, 255, 0.6);
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    border-radius: none;
+    border: none;
+  }
+  .nav-link {
+    text-align: center;
+  }
+  .nav-link {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
