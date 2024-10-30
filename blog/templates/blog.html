@@ -1,0 +1,107 @@
+{% extends "master.html" %}
+
+{% block content %}
+ <section class="main-blog">
+    <div class="earth-bg">
+        <img src="./assets/earth.png" alt="Rotating moon" style="width: 35%; height: auto;">
+    </div>
+    <div class="container my-4 ">
+        <div class="d-flex justify-content-center">
+            <form id="search-form" class="d-flex" role="search">
+                <input id="search-input" class="form-control me-2" type="search" placeholder="Search"
+                    aria-label="Search">
+                <button class="btn btn-info" type="submit">Search</button>
+            </form>
+        </div>
+        <div id="search-results" class="mt-3"></div>
+        <div class="row px-sm-2">
+            <!-- Trending Topics (Order 1 on mobile, order 2 on larger screens) -->
+            <div class="col-lg-3 col-md-4 col-sm-12 order-md-2 order-sm-1 mb-4">
+                <div class="card trending-topic">
+                    <div class="card-body">
+                        <h5 class="card-title">Trending Topics</h5>
+                        <a href="#"><span class="badge text-bg-info m-1">Space X</span></a>
+                        <a href="#"><span class="badge text-bg-info m-1">NASA</span></a>
+                        <a href="#"><span class="badge text-bg-info m-1">ISS</span></a>
+                        <a href="#"><span class="badge text-bg-info m-1">ISRO</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Posts (Order 2 on mobile, order 1 on larger screens) -->
+            <div class="col-lg-9 col-md-8 col-sm-12 order-md-1 order-sm-2">
+                <div class="row">
+                    <!-- Single Post Card -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="card post-card">
+                            <img src="./assets/moon-png.png" class="card-img-top post-img" alt="Post Image">
+                            <div class="card-body">
+                                <span class="badge text-bg-light m-1">Universe</span>
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text">Some example text to build on the card title and make up the bulk of the content.</p>
+                                <a href="#" class="btn rounded-pill read-me">Read me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="card post-card">
+                            <img src="./assets/moon-png.png" class="card-img-top post-img" alt="Post Image">
+                            <div class="card-body">
+                                <span class="badge text-bg-light m-1">Universe</span>
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text">Some example text to build on the card title and make up the bulk of the content.</p>
+                                <a href="#" class="btn rounded-pill read-me">Read me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="card post-card">
+                            <img src="./assets/moon-png.png" class="card-img-top post-img" alt="Post Image">
+                            <div class="card-body">
+                                <span class="badge text-bg-light m-1">Universe</span>
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text">Some example text to build on the card title and make up the bulk of the content.</p>
+                                <a href="#" class="btn rounded-pill read-me">Read me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="card post-card">
+                            <img src="./assets/moon-png.png" class="card-img-top post-img" alt="Post Image">
+                            <div class="card-body">
+                                <span class="badge text-bg-light m-1">Universe</span>
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text">Some example text to build on the card title and make up the bulk of the content.</p>
+                                <a href="#" class="btn rounded-pill read-me">Read me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="card post-card">
+                            <img src="./assets/moon-png.png" class="card-img-top post-img" alt="Post Image">
+                            <div class="card-body">
+                                <span class="badge text-bg-light m-1">Universe</span>
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text">Some example text to build on the card title and make up the bulk of the content.</p>
+                                <a href="#" class="btn rounded-pill read-me">Read me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="card post-card">
+                            <img src="./assets/moon-png.png" class="card-img-top post-img" alt="Post Image">
+                            <div class="card-body">
+                                <span class="badge text-bg-light m-1">Universe</span>
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text">Some example text to build on the card title and make up the bulk of the content.</p>
+                                <a href="#" class="btn rounded-pill read-me">Read me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat for more posts -->
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+{% endblock  %}

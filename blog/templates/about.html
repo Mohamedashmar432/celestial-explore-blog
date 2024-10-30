@@ -1,0 +1,57 @@
+{% extends "master.html" %}
+
+{% block content %}
+ <section class="about-us">
+    <div class="container">
+        <h1 class="highlight my-3"> Celestial Blogs: Exploring the Cosmos, One Story at a Time</h1>
+        <h3 class="my-4 text-white">About<span class="highlight"> Us</span></h1>
+            <p class="text-white">
+                Welcome to Celestial Blogs – a universe of insights, discoveries, and stories that delve into the
+                awe-inspiring realm of space. From the mysteries of distant galaxies to the science behind celestial
+                bodies and the latest in space exploration, our blog is designed to ignite curiosity and expand
+                knowledge about the universe beyond. Whether you're passionate about astrophysics, curious about
+                upcoming space missions, or simply starstruck by the night sky, our content aims to bring the
+                wonders of space to your screen. Join us as we explore the final frontier, one fascinating blog post
+                at a time.
+            </p>
+            <h3 class="my-4 text-white">Our<span class="highlight"> Vision</span></h1>
+                <p class="text-white">
+                    At Celestial Blogs, our vision is to make the mysteries of space accessible and engaging for
+                    everyone. We aim to inspire curiosity, spark wonder, and fuel a love for the cosmos by providing
+                    insightful, accurate, and fascinating content. From cutting-edge discoveries to the timeless
+                    beauty of the stars, we’re here to bridge the gap between Earth and the universe. We believe
+                    that understanding space enriches our connection to our world and opens our minds to endless
+                    possibilities. Join us as we journey through the cosmos, bringing you closer to the stars, one
+                    blog post at a time.</p>
+                <h3 class="my-4 text-white">Contact<span class="highlight"> Us</span></h1>
+                    <div class="card contact-card">
+                        <div class="card-bod">
+                            <form id="contactForm" novalidate>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name"
+                                        placeholder="Your Name" required>
+                                    <div class="invalid-feedback">Please enter your name.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="Your Email" required>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="4"
+                                        placeholder="Your Message" required></textarea>
+                                    <div class="invalid-feedback">Please enter your message.</div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+
+                    </div>
+
+    </div>
+ </section>
+
+{% endblock  %}
