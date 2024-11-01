@@ -20,10 +20,12 @@
                 <div class="card trending-topic">
                     <div class="card-body">
                         <h5 class="card-title">Trending Topics</h5>
-                        <a href="#"><span class="badge text-bg-info m-1">Space X</span></a>
-                        <a href="#"><span class="badge text-bg-info m-1">NASA</span></a>
-                        <a href="#"><span class="badge text-bg-info m-1">ISS</span></a>
-                        <a href="#"><span class="badge text-bg-info m-1">ISRO</span></a>
+                        {% if all_categories %}
+                           {% for topics in all_categories %}
+                            <a href="#"><span class="badge text-bg-info m-1">{{topics.name}}</span></a>
+                           {% endfor %}
+                        {% endif %}    
+                        
                     </div>
                 </div>
             </div>
@@ -32,76 +34,62 @@
             <div class="col-lg-9 col-md-8 col-sm-12 order-md-1 order-sm-2">
                 <div class="row">
                     <!-- Single Post Card -->
+                    {% if page_obj %}
+                    {% for post in page_obj %}
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                         <div class="card post-card">
-                            <img src="./assets/moon-png.png" class="card-img-top post-img" alt="Post Image">
+                            <img src="{{post.img_url}}" loading="lazy" class="card-img-top post-img" alt="{{post.title}}">
                             <div class="card-body">
                                 <span class="badge text-bg-light m-1">Universe</span>
-                                <h5 class="card-title">Card Title</h5>
-                                <p class="card-text">Some example text to build on the card title and make up the bulk of the content.</p>
+                                <h5 class="card-title">{{post.title}}</h5>
+                                <p class="card-text">{{post.content|truncatechars:100}}</p>
                                 <a href="#" class="btn rounded-pill read-me">Read me</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                        <div class="card post-card">
-                            <img src="./assets/moon-png.png" class="card-img-top post-img" alt="Post Image">
-                            <div class="card-body">
-                                <span class="badge text-bg-light m-1">Universe</span>
-                                <h5 class="card-title">Card Title</h5>
-                                <p class="card-text">Some example text to build on the card title and make up the bulk of the content.</p>
-                                <a href="#" class="btn rounded-pill read-me">Read me</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                        <div class="card post-card">
-                            <img src="./assets/moon-png.png" class="card-img-top post-img" alt="Post Image">
-                            <div class="card-body">
-                                <span class="badge text-bg-light m-1">Universe</span>
-                                <h5 class="card-title">Card Title</h5>
-                                <p class="card-text">Some example text to build on the card title and make up the bulk of the content.</p>
-                                <a href="#" class="btn rounded-pill read-me">Read me</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                        <div class="card post-card">
-                            <img src="./assets/moon-png.png" class="card-img-top post-img" alt="Post Image">
-                            <div class="card-body">
-                                <span class="badge text-bg-light m-1">Universe</span>
-                                <h5 class="card-title">Card Title</h5>
-                                <p class="card-text">Some example text to build on the card title and make up the bulk of the content.</p>
-                                <a href="#" class="btn rounded-pill read-me">Read me</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                        <div class="card post-card">
-                            <img src="./assets/moon-png.png" class="card-img-top post-img" alt="Post Image">
-                            <div class="card-body">
-                                <span class="badge text-bg-light m-1">Universe</span>
-                                <h5 class="card-title">Card Title</h5>
-                                <p class="card-text">Some example text to build on the card title and make up the bulk of the content.</p>
-                                <a href="#" class="btn rounded-pill read-me">Read me</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                        <div class="card post-card">
-                            <img src="./assets/moon-png.png" class="card-img-top post-img" alt="Post Image">
-                            <div class="card-body">
-                                <span class="badge text-bg-light m-1">Universe</span>
-                                <h5 class="card-title">Card Title</h5>
-                                <p class="card-text">Some example text to build on the card title and make up the bulk of the content.</p>
-                                <a href="#" class="btn rounded-pill read-me">Read me</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Repeat for more posts -->
+                    {% endfor %}
+                {% endif %}    
                 </div>
             </div>
         </div>
+        <div class="col-12 my-3">
+            {% if page_obj.has_other_pages %}
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        {% if page_obj.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page=1" aria-label="First">
+                                    <span aria-hidden="true">&laquo; first</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                                    <span aria-hidden="true">previous</span>
+                                </a>
+                            </li>
+                        {% endif %}
+                        <li class="page-item">
+                            <span class="page-link">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</span>
+                        </li>
+                        {% if page_obj.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                                    <span aria-hidden="true">next</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Last">
+                                    <span aria-hidden="true">last &raquo;</span>
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            {% else %}
+                <p>No Posts Available</p>
+            {% endif %}
+        </div>
+        
     </div>
  </section>
 {% endblock  %}
