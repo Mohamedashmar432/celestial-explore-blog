@@ -46,7 +46,7 @@
                                 <span class="badge text-bg-light m-1">Universe</span>
                                 <h5 class="card-title">{{post.title}}</h5>
                                 <p class="card-text">{{post.content|truncatechars:50}}</p>
-                                <a href="{{post.slug}}" class="btn rounded-pill read-me">Read me</a>
+                                <a href="{% url 'details' slug=post.slug %}" class="btn rounded-pill read-me">Read me</a>
                             </div>
                         </div>
                     </div>

@@ -3,52 +3,12 @@
 {% block content %}
  <section class="blog-content">
     <div class="container">
-        <img src="./assets/space-1.jpg" class="img-fluid" alt="space x rocket">
-        <h1 class="title my-2">this is space x rocker </h1>
+        <img src="{{ post.img_url }}" class="img-fluid" loading="lazy" alt="post.slug" width="50%">
+        <h1 class="title my-2">{{ post.title }}</h1>
+        <p class="text-white m-2">Posted on {{post.created_at|date:"F j, Y"}}</p>
         <div class="content m-3">
             <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic adipisci possimus ex accusantium
-                expedita excepturi maiores quam similique, aliquam et voluptas consequatur! Pariatur, quis quam
-                earum impedit cumque perspiciatis sequi.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa natus delectus velit, facilis
-                voluptates labore aut id ullam aspernatur, dolorum consectetur mollitia debitis saepe. Deserunt,
-                ducimus. Dolores amet nisi tenetur odit quasi doloribus omnis! Ullam rerum, quod repellendus
-                necessitatibus excepturi maxime facere beatae a doloremque aspernatur rem id harum obcaecati fugit
-                eius minus non voluptate ipsum recusandae! Porro consectetur hic repellat quisquam eius aut cumque
-                doloremque aperiam aliquid asperiores necessitatibus enim molestias velit, cum provident distinctio
-                nam vel at, dolorem nulla eveniet rem voluptatum voluptas. Porro itaque esse, ut ad laborum quos
-                dolorem temporibus unde aut totam consectetur quam repellendus commodi cupiditate, quisquam
-                veritatis tempore cum facilis ullam ratione neque incidunt. Quibusdam eos in voluptatibus cumque
-                facere esse atque ratione nostrum officiis libero. Modi ipsum quidem officia natus? Voluptates nisi
-                minus nobis ullam, blanditiis pariatur deserunt. Reiciendis dignissimos, accusantium consectetur a
-                iste praesentium ex alias voluptas qui error tempora incidunt nulla at hic perspiciatis minima rerum
-                repellat nihil nostrum ab! Asperiores doloribus dolores error ipsa hic aliquam magnam corrupti nihil
-                earum facere culpa quo nobis labore iusto similique, deleniti incidunt et? Iste, fugiat excepturi
-                soluta aspernatur voluptatem sunt, exercitationem explicabo cumque alias velit autem quod? Excepturi
-                in vel ducimus ab voluptatum. Magni, repellat. Optio esse magni ex vitae porro hic pariatur repellat
-                autem commodi ipsa, aspernatur minus deleniti natus minima dolorum vero laborum. Eius quod provident
-                autem incidunt aperiam obcaecati illo, delectus a, voluptatibus tempore est quidem odio laudantium
-                excepturi vel. Soluta placeat deleniti expedita nam, illo asperiores ullam natus numquam modi sint?
-                Consequatur ab rem laboriosam, et officiis quod quisquam reprehenderit dolor necessitatibus dicta
-                cum soluta ipsam nisi animi veritatis dolorum odio cupiditate fugiat est id cumque quia? Nam ex,
-                voluptatum ratione cum accusamus laborum labore perspiciatis magni quis officia dolorem nesciunt
-                voluptatibus explicabo laudantium laboriosam maiores odit quod facilis numquam. Molestiae illum
-                neque iste ea officia eaque aperiam quisquam itaque fugit doloremque architecto, exercitationem,
-                rerum non recusandae unde, quas quia magni. Id, doloribus dignissimos quis vero voluptate
-                perspiciatis? Laborum maxime expedita quisquam. Explicabo laudantium eius pariatur assumenda quia ut
-                libero provident obcaecati possimus commodi. Incidunt optio mollitia unde beatae, eaque harum
-                eligendi ut dolorem, vero veniam repellendus porro id est cum? Excepturi architecto sequi
-                dignissimos. Mollitia, dolore ipsam nostrum voluptatibus animi quaerat vel quasi nam magni quo
-                labore facilis ab laboriosam tenetur! Modi voluptatibus maxime beatae culpa praesentium atque neque
-                harum totam sit, voluptatum, necessitatibus aut illum laboriosam molestiae eos, at repellat. Nulla
-                nisi, alias aut, corrupti soluta nam voluptatem assumenda iure id reiciendis vel voluptate libero
-                possimus quo atque consequuntur dolores asperiores doloremque suscipit blanditiis, autem recusandae
-                mollitia! Sit ad est dolor accusantium quam sed veritatis, consequuntur recusandae architecto
-                praesentium quisquam beatae doloremque odio, rem officia maiores. Id sunt reiciendis eligendi, aut,
-                veritatis minus non animi odio commodi eum quam cupiditate in aliquid at nihil unde eaque!
-                Voluptates possimus consequatur, nobis distinctio, voluptas quia eveniet voluptatum vel numquam
-                omnis ipsum minima eius molestias, doloremque provident ab quos! Eaque fugiat vitae libero provident
-                dicta. Vel expedita ipsa ab?
+               {{ post.content }}
             </p>
         </div>
     </div>

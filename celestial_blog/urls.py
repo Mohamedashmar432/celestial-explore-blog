@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from blog import views
 
+app_name = 'blog'
+
 urlpatterns = [
     path('',views.index,name='index'),
     path('blog/',views.blog,name='blog'),
-    path('blog/<int:id>',views.blog_details,name='details'),
+    path('blog/<str:slug>',views.blog_details,name='details'),
     path('solar_explore/',views.solar_explore,name='solar_explore'),
     path('about/',views.about,name="about"),
     path('admin/', admin.site.urls)
