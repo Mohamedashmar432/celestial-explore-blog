@@ -132,7 +132,7 @@ Explore, learn, and be inspired by the wonders of space with the Celestial Explo
 
 #### solar explore(3d-view):
 
-![App Screenshot](sreenshots/3d-view-speed.png)
+![App Screenshot](screenshots/3d-view-speed.png)
 
 #### solar explore(2d-view):
 
