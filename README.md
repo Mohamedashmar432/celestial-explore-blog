@@ -141,3 +141,7 @@ Explore, learn, and be inspired by the wonders of space with the Celestial Explo
 #### solar explore size view:
 
 ![App Screenshot](screenshots/order.png)
+
+#### contact page:
+
+![App Screenshot](screenshots/about.png)
