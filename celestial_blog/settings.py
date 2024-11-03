@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,12 +22,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ob0!o$c7u!3=k=_tc=%4h9_-%ac50oeh8hq89w8$3&=jhpwd7t'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -79,12 +81,12 @@ WSGI_APPLICATION = 'celestial_blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ashmar_celestial_blog',
-        'USER': 'ashmar',
-        'PASSWORD': 'Root12345',
-        'HOST': 'mysql.selfmade.ninja',
-        'PORT': '3306'
+        'ENGINE': config('DATABASE_ENGINE'), # mysql , mention the database engine name for database uses. 
+        'NAME':  config('DATABASE_NAME'),
+        'USER': config('DATABASE_USER'),
+        'PASSWORD': config('DATABASE_PASSWORD'),
+        'HOST':  config('DATABASE_HOST', default='localhost'),
+        'PORT': config('DATABASE_PORT', default='3306') # default port for mysql 
     }
 }
 
