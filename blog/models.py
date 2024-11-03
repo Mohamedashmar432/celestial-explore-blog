@@ -7,6 +7,13 @@ class Category(models.Model):
     def __str__(self) :
         return self.name
 
+
+class space_agency(models.Model):
+    name = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.name    
+
 # Create your models here.
 class Post(models.Model):
     title = models.CharField(max_length=100)
@@ -23,10 +30,5 @@ class Post(models.Model):
     def __str__(self) :
         return self.title
 
-class space_agency:
-    name = models.CharField(max_length=100)
-    
-    def __str__(self):
-        return self.name
             
     

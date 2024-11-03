@@ -23,6 +23,24 @@
                     that understanding space enriches our connection to our world and opens our minds to endless
                     possibilities. Join us as we journey through the cosmos, bringing you closer to the stars, one
                     blog post at a time.</p>
+
+                    {% for field in form  %}
+                        {% if field.errors %}
+                           <div class="col-12">
+                            <span class="fw-bold"> {{field.label_tag}} </span>
+                               {% for error in field.errors %}
+                                 <span class="text-danger"> {{error}} </span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+               
+                    {% endfor %}
+
+                    {% if success_message %}
+                        <div class="alert alert-success" role="alert">
+                        {{success_message}}
+                         </div>
+                     {% endif %}
                 <h3 class="my-4 text-white">Contact<span class="highlight"> Us</span></h1>
                     <div class="card contact-card">
                         <div class="card-bod">
@@ -33,6 +51,7 @@
                                         placeholder="Your Name" required>
                                     <div class="invalid-feedback">Please enter your name.</div>
                                 </div>
+                                {% csrf_token %}
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email address</label>
                                     <input type="email" class="form-control" id="email" name="email"

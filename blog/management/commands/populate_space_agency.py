@@ -4,7 +4,7 @@ from django.core.management.base import BaseCommand
 import random
 
 class Command(BaseCommand):
-    help = "This commands inserts category data"
+    help = "This commands inserts space_agency data"
 
     def handle(self, *args: Any, **options: Any):
         # Delete existing data 

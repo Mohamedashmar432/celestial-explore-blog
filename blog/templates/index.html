@@ -30,6 +30,17 @@
                         
                     </div>
                 </div>
+                <div class="card trending-topic my-2" style="width:24rem">
+                    <div class="card-body">
+                        <h5 class="card-title">Top Spase Organizatons</h5>
+                        {% if all_space_agencies %}
+                           {% for agents in all_space_agencies %}
+                            <a href="#"><span class="badge text-bg-info m-1">{{agents.name}}</span></a>
+                           {% endfor %}
+                        {% endif %}    
+                        
+                    </div>
+                </div>
             </div>
 
             <!-- Posts (Order 2 on mobile, order 1 on larger screens) -->
@@ -41,9 +52,9 @@
                     {% for post in all_post %}
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                         <div class="card post-card">
-                            <img src="{{post.img_url}}" loading="lazy" class="card-img-top post-img" alt="{{post.title}}">
+                            <img src="{{post.img_url}}"  loading="lazy" class="card-img-top post-img" alt="{{post.title}}">
                             <div class="card-body">
-                                <span class="badge text-bg-light m-1">Universe</span>
+                                <span class="badge text-bg-light m-1">{{ post.category.name }}</span>
                                 <h5 class="card-title">{{post.title}}</h5>
                                 <p class="card-text">{{post.content|truncatechars:50}}</p>
                                 <a href="{% url 'details' slug=post.slug %}" class="btn rounded-pill read-me">Read me</a>
